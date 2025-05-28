@@ -31,6 +31,7 @@ body {
   line-height: 1.5;
   color: white;
   font-size: 14px;
+  overflow-x: hidden;
 }
 .container {
   max-width: 1440px;
@@ -106,9 +107,10 @@ body {
 }
 .features-row {
   display: flex;
-  width: 100ch;
+  width: 50%;
   align-items: center;
   text-align: center;
+  justify-content: center;
   gap: 7rem;
 }
 .card h2 {
@@ -282,6 +284,11 @@ footer .logo-img {
   color: hsl(176, 68%, 64%);
 }
 
+@media (max-width: 992px) {
+  .comments {
+    flex-direction: column;
+  }
+}
 @media (max-width: 768px) {
   .container {
     align-items: center;
@@ -304,9 +311,7 @@ footer .logo-img {
   .features-productive h2 {
     max-width: none;
   }
-  .comments {
-    flex-direction: column;
-  }
+
   .early-access-card {
     width: 90%;
   }
